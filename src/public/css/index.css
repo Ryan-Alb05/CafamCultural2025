@@ -1,0 +1,348 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth;
+  }
+  
+  header {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Catedral_de_San_Pedro_Apostol.jpg/1280px-Catedral_de_San_Pedro_Apostol.jpg') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    background-color: rgba(0,0,0,0.6);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    animation: fadeInUp 1.5s ease-out;
+  }
+  
+  nav {
+    background-color: #007a04;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #home {
+    background-image: url('../Imagenes/maxresdefault.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 816px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  section {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto; /* Ajustado para eliminar espacios individuales */
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  
+  .titulo {
+    font-size: 40px;
+    color: green;
+  }
+  
+  .lugares-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+  }
+  
+  .divhistoria, 
+  .divazucar {
+    background-size: contain;
+    background-position: center;
+    border-radius: 5px;
+    border-color: black;
+    height: 300px;
+    width: 900px;
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .divhistoria{
+    background-image: url(../Imagenes/spm1.jpg);
+  }
+  
+  .divazucar{
+    background-image: url(../Imagenes/azucar.jpg);
+  }
+  .divpeloteros{
+    background-image: url(../Imagenes/b2b010_a416274781e94012b143f200d9a2e915~mv2.avif);
+  }
+  .divcultura{
+    background-image: url(../Imagenes/cultura.jpg);
+  }
+  .divartesania{
+    background-image: url(../Imagenes/artesania.jpg);
+  }
+  
+  
+  .divgagas{
+    background-image: url(../Imagenes/gagas.webp);
+  
+  }
+  
+  .divcocolos{
+    background-image: url(../Imagenes/PresentacióndelTeatroCocoloDanzantedelosGuloyasdeSanPedrodeMacorís2.jfif);
+  }
+  
+  .divmorey{
+    background-image: url(../Imagenes/edificiomorey.webp);
+  }
+  
+  .divpeloteros, 
+  .divcultura, 
+  .divartesania,
+  .divcocolos,
+  .divgagas,
+  .divmorey {
+    background-size: contain;
+    background-position: center;
+    border-radius: 5px;
+    border-color: black;
+    height: 300px;
+    width: 300px;
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 1rem 0; /* Espaciado entre secciones */
+  }
+  
+  
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    justify-items: center;
+  }
+  
+  
+  .gallery img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  
+  .gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  }
+  
+  
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .contact-form label {
+    font-weight: bold;
+    color: #007a04;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .contact-form button {
+    background-color: #007a04;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #005e03;
+  }
+  
+  .form {
+    margin-top: 1.5rem;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  #topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #004488;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    animation: fadeInUp 0.8s ease-in-out;
+  }
+  
+  #topBtn:hover {
+    background-color: #0066cc;
+    transform: scale(1.1);
+  }
+  
+  .reservas-container {
+    position: fixed ;
+    right: 5px;
+    top: -45px;
+    margin: 3rem 0 1rem;
+  }
+  
+  .btn-reservas {
+    display: inline-block;
+    background-color: #c20000;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn-reservas:hover {
+    background-color: #005e03;
+    transform: scale(1.05);
+  }
+  
+  
+  
+  @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    nav {
+        padding: 0.5rem;
+        flex-wrap: wrap;
+    }
+  
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+  
+    header h1 {
+        font-size: 2rem;
+        padding: 1rem;
+    }
+  
+    .titulo {
+        font-size: 28px;
+        text-align: center;
+    }
+  
+    .divpeloteros,
+    .divcultura,
+    .divartesania {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+  
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+  
+    .lugares-container > div {
+      flex: 0 1 100%; /* 1 por fila en móviles */
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 992px) {
+    nav a {
+        margin: 0 10px;
+        font-size: 0.95rem;
+    }
+  
+    .titulo {
+        font-size: 32px;
+    }
+  
+    .divpeloteros,
+    .divcultura,
+    .divartesania {
+        width: 45%;
+        margin: 1rem auto;
+    }
+  
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .lugares-container > div {
+      flex: 0 1 calc(50% - 1rem); /* 2 por fila en pantallas medianas */
+    }
+  }
+  
