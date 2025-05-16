@@ -1,10 +1,21 @@
-document.getElementById('reservaForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    const nombre = document.getElementById('nombre').value;
-    const paquete = document.getElementById('paquete').value;
-    const fecha = document.getElementById('fecha').value;
+const form = document.getElementById('reservaForm');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-    document.getElementById('mensajeConfirmacion').textContent = `¡Gracias, ${nombre}! Tu reserva para el paquete "${paquete}" el día ${fecha} ha sido recibida.`;
+  const data = {
+    nombre_completo: form.nombre.value,
+    correo_electronico: form.email.value,
+    paquete_turistico: form.paquete.value,
+    fecha_reserva: form.fecha.value,
+    comentarios: form.comentarios.value,
+  };
 
-    this.reset();
+  const response = await fetch('/api/reservas', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
   });
+
+  const result = await response.json();
+  document.getElementById('mensajeConfirmacion').textContent = result.message;
+});

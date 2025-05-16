@@ -1,4 +1,5 @@
 
+
 // Datos de los paquetes de tour
 const tours = [
     {
@@ -114,5 +115,5 @@ searchInput.addEventListener('input', () => {
 
 // Botón reservar
 reserveBtn.addEventListener('click', () => {
-    window.location.href = "./Formreservas.ejs"; // Redirecciona a tu formulario de reserva
+    window.location.href = "/formreservas"; // Redirecciona a tu formulario de reserva
 });
