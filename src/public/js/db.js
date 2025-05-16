@@ -1,10 +1,13 @@
 import mysql from 'mysql2';
 
 const connection = mysql.createConnection({
+//   host: 'Reservas',
   host: 'localhost',
   user: 'root',
   password: 'Ralberto09',
   database: 'turismo_reservas',
+
+
     
 });
 
